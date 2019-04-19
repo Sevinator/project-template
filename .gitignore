@@ -1,4 +1,8 @@
 
+# Project Part
 node_modules/
 dist/*
 package-lock.json
+
+# IDE files
+.idea/**

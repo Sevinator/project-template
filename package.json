@@ -15,6 +15,7 @@
   "author": "Me",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.4.1",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
     "vue": "^2.6.10",
