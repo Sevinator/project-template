@@ -1,16 +1,19 @@
 {
   "name": "project",
   "version": "0.0.0",
-  "description": "Ceci est un template de projet en nodeJS et Vue",
+  "description": "Ceci est un template de projet en VueJS géré par un serveur NodeJS couplé avec Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "watch": "webpack --watch",
+    "dev": "webpack --config config/webpack.dev.config.js",
+    "production": "webpack --config config/webpack.prod.config.js"
   },
   "keywords": [
     "Template",
     "Project",
     "VueJs",
-    "NodeJS"
+    "NodeJS",
+    "Webpack"
   ],
   "author": "Me",
   "license": "ISC",
@@ -22,6 +25,11 @@
     "vue-loader": "^15.7.0",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.0",
-    "webpack": "^4.30.0"
+    "webpack": "^4.30.0",
+    "webpack-pwa-manifest": "^4.0.0",
+    "workbox-webpack-plugin": "^4.3.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
   }
 }
