@@ -10,7 +10,7 @@ module.exports = {
     devtool: "source-map",
     output: {
         filename: '../dist/main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../dist')
     },
     resolve: {
         alias: {
@@ -62,17 +62,17 @@ module.exports = {
             fingerprints: false,
             crossorigin: 'use-credentials', // Sert pour les requêtes cross-origin
             icons: [
-                {
-                    src: "",
-                    sizes: [] // Devrait générer toutes les tailles, si format SVG ?
-                }
+                // {
+                //     src: "",
+                //     sizes: [] // Devrait générer toutes les tailles, si format SVG ?
+                // }
             ]
         }),
 
         new HtmlWebpackPlugin({
             minify: false,
             filename: "index.html",
-            favicon: "./src/assets/img/favicon.ico", // Chemin générique vers l'icone
+            // favicon: "./src/assets/img/favicon.ico", // Chemin générique vers l'icone
             title: "Titre du document",
             meta: {
                 author: "",
@@ -86,11 +86,7 @@ module.exports = {
         new workboxPlugin.GenerateSW({
             swDest: 'sw.js',
             clientsClaim: true,
-            skipWaiting: true,
-            runtimeCaching: [{
-                // urlPattern: new RegExp(''),
-                // handler: 'StaleWhileRevalidate'
-            }]
+            skipWaiting: true
         })
     ]
 };
