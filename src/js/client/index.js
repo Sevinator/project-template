@@ -8,18 +8,13 @@ import Vue from 'vue';
 
 import router from './router/router.js';
 import store from './store/store.js';
-import './includes/Modernizr.js';
-import Constants from "./includes/constants.js";
+import Constants from "../constants/constants.js";
 
 const app = new Vue({
     el: "#app",
     store,
     router
 });
-
-setInterval(function () {
-    store.commit('storeInLocalStorage');
-}, Constants.MIN_1);
 
 function registerServiceWorker() {
     // enregistre le script sw avec les navigateurs qui le gèrent
